@@ -5,7 +5,7 @@
 #include "Mage.h"
 #include <iostream>
 #include <string>
-
+#include "Vampire.h"
 int main()
 {
     //std::cout << "Enter your name: ";
@@ -17,9 +17,9 @@ int main()
     //Player     player{ name };
     //StoneGolem stonegolem{ "Stone Golem", 200, 100 };
     //Battle     battle{ player, stonegolem };
-    Mage mage{ "Mage" };
-    Slime slime{ "Slime", 150, 50 };
-    Battle     battle{ mage, slime };
+    Mage mage{ "klee" };
+    Vampire vampire{ "Eury", 150, 40 };
+    Battle     battle{ mage, vampire };
     battle.run();
 
     return 0;

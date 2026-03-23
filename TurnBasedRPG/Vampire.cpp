@@ -1,19 +1,23 @@
-#include "StoneGolem.h"
+#include "Vampire.h"
+#include "ActionResult.h"
 #include <iostream>
 
-StoneGolem::StoneGolem(std::string name, int maxHp, int maxToughness)
+Vampire::Vampire(std::string name, int maxHp, int maxToughness)
     : Enemy{ std::move(name), maxHp, maxToughness }
 {
 }
 
-ActionResult StoneGolem::performAttack()
+ActionResult Vampire::performAttack()
 {
     ++m_turnCount;
-    if (m_turnCount % 3 == 0)
+
+    if (m_turnCount % 4 == 0)
     {
         std::cout << "  >> " << m_name
-            << " raises both fists -- GROUND SLAM! <<\n";
+            << " absorbs the moisture -- REGENERATE! <<\n";
+        heal(12);
         return ActionResult{ ActionResult::Type::Damage, 8 };
     }
+
     return ActionResult{ ActionResult::Type::Damage, 8 };
 }
