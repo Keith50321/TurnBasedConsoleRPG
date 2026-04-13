@@ -31,3 +31,4 @@ ActionResult Enemy::performAttack()
 {
     return ActionResult{ ActionResult::Type::Damage, 20 };
 }
+bool Enemy::hasDrop() const { return m_drop.has_value(); }

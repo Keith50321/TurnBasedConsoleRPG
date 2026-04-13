@@ -13,7 +13,7 @@ ActionResult StoneGolem::performAttack()
     {
         std::cout << "  >> " << m_name
             << " raises both fists -- GROUND SLAM! <<\n";
-        return ActionResult{ ActionResult::Type::Damage, 8 };
+        return ActionResult{ ActionResult::Type::Damage, 35 };
     }
-    return ActionResult{ ActionResult::Type::Damage, 8 };
+    return ActionResult{ ActionResult::Type::Damage, 20 };
 }
